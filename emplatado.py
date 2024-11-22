@@ -4,6 +4,24 @@ from manim import *
 config.background_color = YELLOW_A
 config.default_stroke_color=BLACK
 
+def MiFractal():
+    """
+    Aquí dentro es donde tienes que introducir tu iniciador (I), generador (G), y número de pasos (n).
+    Si quieres añadir también una alternancia (soportada por KochAlternoComplejo), añádela en A.
+    """
+    I=np.array([[-3,0,0],[3,0,0]])
+    G=np.array([ [-3,0,0], [-1,0,0],[0,np.sqrt(3),0], [1,0,0], [3,0,0]])
+    n=4
+    A=None
+
+    #¿Quieres un fractal ya preparado? ¡Prueba con estos! Aumenta el número para ver más detalles
+    #[I,G,n,A]=CopoDeNieve(5)
+    #[I,G,n,A]=Sierpinski(5)
+    [I,G,n,A]=Aleatorio(5, semilla=111)
+
+
+    return([I,G,n,A])
+
 def Receta(self,I,G,n, A=None, Dim=True, Titulo=None):
     """
     Este código se encarga de dibujar tu fractal y animarlo. Si sabes lo que estás haciendo, puedes modificarlo para cambiar las animaciones a tu gusto.
@@ -109,23 +127,6 @@ def Receta(self,I,G,n, A=None, Dim=True, Titulo=None):
     self.wait()
 
 
-def MiFractal():
-    """
-    Aquí dentro es donde tienes que introducir tu iniciador (I), generador (G), y número de pasos (n).
-    Si quieres añadir también una alternancia (soportada por KochAlternoComplejo), añádela en A.
-    """
-    I=np.array([[-3,0,0],[3,0,0]])
-    G=np.array([ [-3,0,0], [-1,0,0],[0,np.sqrt(3),0], [1,0,0], [3,0,0]])
-    n=4
-    A=None
-
-    #¿Quieres un fractal ya preparado? ¡Prueba con estos! Aumenta el número para ver más detalles
-    #[I,G,n,A]=CopoDeNieve(5)
-    #[I,G,n,A]=Sierpinski(5)
-    [I,G,n,A]=Aleatorio(5, semilla=111)
-
-
-    return([I,G,n,A])
 
 
 class AnimaMiFractal(Scene):
