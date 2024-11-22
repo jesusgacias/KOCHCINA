@@ -1,7 +1,7 @@
 # KOCHCINA
 
 ### Descripción:
-Dos scripts en python para generar curvas de Koch personalizadas y animarlas con `manim`. Código compañero del vídeo "Cómo cocinar tu propio fractal"
+Dos scripts en python para generar curvas de Koch personalizadas y animarlas con `manim`. Código compañero del vídeo "Cómo cocinar tu propio fractal" https://youtu.be/BXNTbzUIrQ0.
 
 ### Requerimientos:
 Necesitarás las librerías `numpy` y `matplotlib` para poder ejecutar `horno.py`, además de `random` para poder generar fractales aleatorios. Para poder ejecutar `emplatado.py`, necesitarás además tener `manim` (Yo usé Manim Community v0.18.1).
